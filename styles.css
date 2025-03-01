@@ -1,0 +1,454 @@
+/* 全ての要素に適用（余白とボーダーをリセット） */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 背景画像の固定 */
+.background-section {
+    background-image: url('img/background.jpg'); /* 背景画像 */
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* 背景が他の要素の後ろに表示されるように設定 */
+}
+
+
+
+
+
+/* ナビゲーションバーのスタイル */
+.navbar {
+    display: flex; /* 横並びに配置 */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: space-between; /* 左右に要素を配置 */
+    background-color: #1a1a1a; /* 背景色（黒系） */
+    padding: 10px 20px; /* 内側の余白を設定 */
+    color: white; /* 文字色を白に設定 */
+    position: relative; /* ナビゲーションバーは影響を受けないように */
+    z-index: 10; /* ナビゲーションバーを他の要素より前面に配置 */
+}
+
+/* ロゴエリアのスタイル */
+.logo {
+    display: flex; /* ロゴとテキストを横並び */
+    align-items: center; /* 垂直方向の中央揃え */
+}
+
+/* ロゴ画像のサイズ設定 */
+.logo img {
+    width: 40px; /* 横幅を40px */
+    height: 40px; /* 高さを40px */
+    margin-right: 10px; /* 右側に余白を設定 */
+}
+
+/* ナビゲーションリンクのリストスタイル */
+.nav-links {
+    list-style: none; /* リストのマーカー（●）を消す */
+    display: flex; /* 横並びにする */
+}
+
+/* 各ナビゲーションリンクの間隔を調整 */
+.nav-links li {
+    margin: 0 15px; /* 左右に15pxの余白を設定 */
+}
+
+/* ナビゲーションリンクのスタイル */
+.nav-links a {
+    text-decoration: none; /* 下線を消す */
+    color: white; /* 文字色を白にする */
+    font-size: 16px; /* フォントサイズを16pxにする */
+}
+
+/* 検索ボックスのスタイル */
+.search-box {
+    display: flex; /* 横並びにする */
+    align-items: center; /* 垂直方向に中央揃え */
+    background: white; /* 背景色を白にする */
+    padding: 5px; /* 内側の余白を設定 */
+    border-radius: 20px; /* 角を丸くする */
+}
+
+/* 検索入力欄のスタイル */
+.search-box input {
+    border: none; /* 枠線を消す */
+    padding: 5px; /* 内側の余白を設定 */
+    outline: none; /* フォーカス時の枠線を消す */
+    width: 200px; /* 入力欄の横幅を200pxにする */
+}
+
+/* 検索ボタンとクリアボタンのスタイル */
+.search-btn,
+.clear-btn {
+    background-color: #008080; /* ボタンの背景色（青緑） */
+    color: white; /* 文字色を白にする */
+    border: none; /* ボーダーを消す */
+    padding: 5px 10px; /* ボタンのサイズ調整 */
+    margin-left: 5px; /* 左側に余白を設定 */
+    cursor: pointer; /* マウスオーバー時にカーソルをポインターにする */
+    border-radius: 5px; /* 角を丸くする */
+}
+
+/* ボタンのホバー時のスタイル */
+.search-btn:hover,
+.clear-btn:hover {
+    background-color: #006666; /* ボタンの背景色を濃い青緑に変更 */
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+/* ソーシャルメディアアイコンのスタイル */
+.social-icons {
+    position: fixed; /* 画面に固定 */
+    left: 20px; /* 左から20px */
+    top: 50%; /* 画面中央から少し下 */
+    transform: translateY(-50%); /* 真ん中に配置 */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* アイコン間のスペース */
+    z-index: 5; /* ソーシャルアイコンをナビゲーションバーの後ろに配置 */
+}
+
+.social-icons a {
+    display: block;
+    width: 40px; /* アイコンの幅 */
+    height: 40px; /* アイコンの高さ */
+}
+
+/* ソーシャルメディアアイコン画像 */
+.social-icons img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* アイコン画像を枠にフィットさせる */
+}
+
+
+
+/* page-contentに対するスタイル */
+.page-content {
+    position: relative;          /* 親要素に相対位置を設定 */
+    display: flex;               /* flexboxを使って要素を並べる */
+    flex-direction: column;      /* 子要素を縦方向に並べる */
+    align-items: flex-start;     /* 左寄せ */
+    justify-content: flex-start; /* 上から順に配置 */
+    margin: 0;                   /* 自動で左右マージンを適用せず、固定 */
+    padding: 20px;               /* 内側の余白 */
+    box-sizing: border-box;      /* paddingとborderが幅に含まれるように */
+    width: auto;                 /* 幅を自動設定 */
+
+    border:3px solid hsl(0, 97%, 48%);
+}
+
+/* 横並びにするためのコンテナ */
+.horizontal-container {
+    display: flex;
+    gap: 30px; /* 横並びの間隔 */
+    align-items: flex-start; /* 上寄せ */
+    margin-bottom: 40px;  /* コンテンツ間の余白 */
+}
+
+/* 旅行のおすすめスポットのタイトル */
+.recommendations-title {
+    text-align: right;
+    margin-top: 40px; /* タイトルと検索結果の間に余白を追加 */
+    margin-right: 220px; /* タイトルと検索結果の間に余白を追加 */
+    font-size: 1.5rem; /* フォントサイズを調整 */
+    color: #1900ff;
+    
+}
+
+/* 検索結果セクション */
+.container {
+    margin-bottom: 40px;  /* コンテンツ間の余白 */
+    width: 100%;
+}
+
+
+
+/* 検索結果の表示幅を広くする */
+#search-results {
+    width: 500px; /* 検索結果の幅を広くする */
+    height: 550px; /* 高さはそのまま */
+    overflow-y: scroll; /* 縦方向にスクロールできるように */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* 背景色を設定 */
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を付けて浮き上がる感じを演出 */
+    position: absolute;
+    right: 10px; /* 右側に表示 */
+    top: 100px; /* 上から少し下げて表示 */
+
+    display: none; /* 初期状態では非表示 */
+    flex-direction: column;
+    gap: 20px; /* アイテム間の間隔を設定 */
+}
+
+
+
+/* 検索結果画像のスタイル */
+.result-image {
+    width: 100%; /* 親要素に合わせて画像を伸縮 */
+
+    height: auto; /* アスペクト比を保ちながら高さを自動調整 */
+    object-fit: cover; /* 画像が枠内に収まるように調整 */
+    margin-bottom: 10px; /* 画像とテキストの間に余白を追加 */
+}
+
+
+
+.explore-content {
+    align-items: flex-start;     /* 左寄せ */
+    text-align: left; /* 中央揃え */
+    border:3px solid hsl(69, 97%, 48%);
+}
+
+/* 見出しのスタイル */
+.explore-heading {
+    text-align: left; /* 中央揃え */
+    margin-top: 50px; /* 上部にスペースを追加 */
+    margin-left: 180px; /* 上部にスペースを追加 */
+    font-size: 3rem; /* 見出しを大きく */
+    font-weight: bold;
+    text-transform: uppercase; /* 文字を大文字に */
+    color: #f90000; /* 文字色を赤に設定 */
+    -webkit-text-stroke: 2px white; /* 文字の外枠を白に設定 */
+    border:3px solid hsl(69, 97%, 48%);
+}
+
+/* 説明文のスタイル */
+.explore-description {
+    text-align: left; /* テキストを左寄せ */
+    margin-left: 100px; /* 左に余白を追加（相対的に調整） */
+
+    font-size: 1.2rem; /* フォントサイズ */
+    max-width: 600px; /* 最大幅を設定して、画面幅に合わせて調整 */
+    border: 3px solid hsl(69, 97%, 48%); /* 枠線の色 */
+    line-height: 1.6; /* 行間の設定 */
+    color: rgb(0, 0, 0); /* 文字の色 */
+    -webkit-text-stroke: 1px rgb(0, 0, 0); /* 文字の外枠を黒に設定 */
+    padding: 20px; /* 内側の余白を追加 */
+    box-sizing: border-box; /* paddingがボックスに含まれるようにする */
+    background-color: rgba(255, 255, 255, 0.7); /* 背景に透過感を追加 */
+}
+
+
+
+
+/* Book Nowボタンのスタイル */
+.book-now-container {
+    text-align: left;
+}
+
+.book-now-btn {
+    margin-top: 30px; /* 左に余白を追加（相対的に調整） */
+    margin-bottom: 10%; /* 左に余白を追加（相対的に調整） */
+    margin-left: 250px; /* 左に余白を追加（相対的に調整） */
+
+    background-color: #0ffff3; /* 赤色背景 */
+    color: rgb(255, 0, 0); /* 白色文字 */
+    font-weight: bold; /* 太文字 */
+    font-size: 1.5rem; /* フォントサイズ */
+    padding: 12px 30px; /* 上下左右に余白 */
+    border: none;
+    border-radius: 15px; /* 丸い角 */
+    cursor: pointer; /* カーソルをポインタに */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* スムーズな遷移 */
+}
+
+/* ホバー時のスタイル */
+.book-now-btn:hover {
+    background-color: #d5ff00; /* ホバー時に色が少し暗くなる */
+    color: rgb(255, 0, 0); /* 白色文字 */
+    transform: translateY(-5px); /* 少し上に浮く */
+}
+
+/* アクティブ状態（クリック時） */
+.book-now-btn:active {
+    transform: translateY(2px); /* クリック時に少し沈む */
+}
+
+
+
+
+
+
+
+
+
+/* About Us セクション */
+.about-us-heading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.0rem;
+    color: #4c00ff;
+    -webkit-text-stroke: 2px rgb(255, 255, 255); /* 文字の外枠を白に設定 */
+    font-weight: bold;
+}
+
+/* 会社情報セクション */
+.company-info {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.411);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.company-info .info-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* チームメンバーセクション */
+.team-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.team-section .team-heading h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #4c00ff;
+    -webkit-text-stroke: 2px rgb(255, 255, 255); /* 文字の外枠を白に設定 */
+    font-weight: bold;
+}
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px; /* 間隔を縮める */
+}
+
+.team-member {
+    width: 230px; /* 幅を少し狭める */
+    background-color: rgba(249, 249, 249, 0.7); /* 背景色を透過させる */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* 影を薄くする */
+    text-align: center;
+}
+
+.team-member .member-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.team-member .role {
+    font-size: 1.1rem;
+    color: #fe0000;
+    margin-bottom: 10px;
+}
+
+.team-member .responsibility {
+    font-size: 1rem;
+    color: #2f00ff;
+}
+
+
+
+/* Contact Us ページ */
+.contact-us-content {
+    display: flex;
+    justify-content: center; /* 左右中央揃え */
+    align-items: center; /* 垂直中央揃え */
+    height: calc(100vh - 100px); /* アイコン高さを差し引いて中央に位置させる */
+    padding: 20px 0; /* 上下の間隔調整 */
+}
+
+/* 左側（テキスト部分） */
+.contact-left {
+    flex: 1;
+    text-align: center; /* テキストを中央に揃える */
+    padding-right: 30px; /* 右側のフォームとの間隔を調整 */
+}
+
+.contact-left h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #c3ff00;
+    -webkit-text-stroke: 2px rgb(255, 0, 0); /* 文字の外枠を白に設定 */
+    margin-bottom: 10px;
+}
+
+.get-in-touch {
+    font-size: 1rem;
+    color: #fcfcfc;
+    margin-bottom: 30px;
+}
+
+/* 右側（フォーム部分） */
+.contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* フォーム部分 */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    background-color: rgba(249, 249, 249, 0.5); /* 透過背景 */
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 各フォームグループ */
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* テキストエリア */
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .submit-btn {
+    background-color: #00a8a3;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background-color: #0762ff;
+}
+
+
+
+
+

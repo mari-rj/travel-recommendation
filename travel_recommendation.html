@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字エンコーディングをUTF-8に設定 -->
+    <meta charset="UTF-8">
+    <!-- レスポンシブデザイン用のビューポート設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ページタイトルを設定 -->
+    <title>Travel Recommendation</title>
+    <!-- 外部CSSファイルをリンク -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 背景画像を含むセクション -->
+    <div class="background-section">
+        <!-- ナビゲーションバー -->
+        <nav class="navbar">
+            <div class="logo">
+                <!-- ロゴ画像を表示 -->
+                <img src="logo.png" alt="TravelBloom Logo">
+                <!-- ロゴ名を表示 -->
+                <span>TravelBloom</span>
+            </div>
+
+            <!-- ナビゲーションリンクのリスト -->
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li> <!-- ホームページリンク -->
+                <li><a href="#" onclick="showPage('about')">About Us</a></li> <!-- 会社情報リンク -->
+                <li><a href="#" onclick="showPage('contact')">Contact Us</a></li> <!-- お問い合わせリンク -->
+            </ul>
+
+            <!-- 検索ボックス -->
+            <div class="search-box">
+                <!-- 検索入力欄 -->
+                <input type="text" id="search-input" placeholder="Enter a destination or keyword">
+                <!-- 検索アイコンをクリックで検索入力欄にフォーカス -->
+                <span class="search-icon" onclick="focusSearch()">🔍</span>
+                <!-- 検索ボタン -->
+                <button class="search-btn">Search</button>
+                <!-- 入力欄をクリアするボタン -->
+                <button class="clear-btn" onclick="clearSearch()">Clear</button>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+<!-- コンテンツ部分 -->
+<div id="home-page" class="page-content">
+
+<!-- 旅行のおすすめスポットタイトル -->
+<h3 class="recommendations-title" style="display: none;">旅行のおすすめスポット</h3>
+
+    <!-- 見出しと説明文 -->
+    <div class="explore-content">
+        <!-- 横並びにするためのコンテナ -->
+        <div class="horizontal-container">
+            <div class="explore-heading">
+                <span class="word">Explore</span><br>
+                <span class="word">Dream</span><br>
+                <span class="word">Destination</span>
+            </div>
+            
+            <!-- 検索結果を表示するセクション -->
+            <div class="container">
+
+                <div id="search-results">
+                    <!-- ここにデータが挿入されます -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 説明文 -->
+        <div class="explore-description">
+            <span class="word">
+                It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.
+            </span>
+        </div>
+
+        <!-- Book Nowボタン -->
+        <div class="book-now-container">
+            <button class="book-now-btn">Book Now</button>
+        </div>
+    </div>
+</div>
+
+
+
+        <div id="about-page" class="page-content" style="display: none;">
+            <!-- About Us 見出し -->
+            <div class="about-us-heading">
+                <h1>About Us</h1>
+            </div>
+
+            <!-- 会社概要 -->
+            <div class="company-info">
+                <div class="info-text">
+                    <p>Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customers. Our mission is to provide the best experience for people traveling to different destinations around the world.</p>
+                    <p>Our values include integrity, innovation, customer satisfaction, and teamwork. We believe in putting our customers first and working together to achieve our goals.</p>
+                    <p>Feel free to explore our website to learn more about what we offer!</p>
+                </div>
+            </div>
+
+            <!-- チームメンバー表示 -->
+            <div class="team-section">
+                <div class="team-heading">
+                    <h2>Our Team</h2>
+                </div>
+                <div class="team-members">
+                    <div class="team-member">
+                        <div class="member-name">John Doe</div>
+                        <p class="role">CEO</p>
+                        <p class="responsibility">John is responsible for...</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-name">Celina Thomas</div>
+                        <p class="role">Team Lead</p>
+                        <p class="responsibility">Celina Thomas is responsible for...</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-name">Mike Tysen</div>
+                        <p class="role">Delivery Head</p>
+                        <p class="responsibility">Mike Tysen is responsible for...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-page" class="page-content" style="display: none;">
+            <!-- Contact Us ページ内容 -->
+            <div class="contact-us-content">
+                <!-- 左側のテキスト部分 -->
+                <div class="contact-left">
+                    <h2>Contact Us</h2>
+                    <!-- 小さい文字列 -->
+                    <p class="get-in-touch">Get in touch</p>
+                </div>
+        
+                <!-- 右側のフォーム部分 -->
+                <div class="contact-right">
+                    <div class="contact-form">
+                        <form action="#" method="post">
+                            <!-- Name -->
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+        
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+        
+                            <!-- Message -->
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+        
+                            <!-- Submit ボタン -->
+                            <button type="submit" class="submit-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <!-- ソーシャルメディアアイコン -->
+        <div class="social-icons">
+            <!-- Twitterアイコン -->
+            <a href="https://twitter.com" target="_blank" title="Twitter">
+                <img src="img/twitter-icon.png" alt="Twitter"> <!-- Twitterアイコン画像 -->
+            </a>
+            <!-- Facebookアイコン -->
+            <a href="https://facebook.com" target="_blank" title="Facebook">
+                <img src="img/facebook-icon.png" alt="Facebook"> <!-- Facebookアイコン画像 -->
+            </a>
+            <!-- Instagramアイコン -->
+            <a href="https://instagram.com" target="_blank" title="Instagram">
+                <img src="img/instagram-icon.png" alt="Instagram"> <!-- Instagramアイコン画像 -->
+            </a>
+            <!-- Youtubeアイコン -->
+            <a href="https://youtube.com" target="_blank" title="YouTube">
+                <img src="img/youtube-icon.png" alt="YouTube"> <!-- Youtubeアイコン画像 -->
+            </a>
+        </div>
+    </div>
+
+    <!-- 外部JavaScriptファイルを読み込む -->
+    <script src="travel_recommendation.js"></script>
+
+</body>
+</html>

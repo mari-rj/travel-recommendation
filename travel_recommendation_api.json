@@ -1,0 +1,80 @@
+{
+    "countries": [
+      {
+        "id": 1,
+        "name": "Australia",
+        "cities": [
+          {
+            "name": "Sydney, Australia",
+            "imageUrl": "img/enter_your_image_for_sydney.jpg",
+            "description": "シドニー・オペラハウスやシドニー・ハーバーブリッジなどの象徴的なランドマークで知られる活気ある都市。"
+          },
+          {
+            "name": "Melbourne, Australia",
+            "imageUrl": "img/enter_your_image_for_melbourne.jpg",
+            "description": "芸術、食文化、多様な地域で有名な文化の中心地。"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Japan",
+        "cities": [
+          {
+            "name": "Tokyo, Japan",
+            "imageUrl": "img/enter_your_image_for_tokyo.jpg",
+            "description": "伝統と現代が融合する大都市で、桜や豊かな文化で有名。"
+          },
+          {
+            "name": "Kyoto, Japan",
+            "imageUrl": "img/enter_your_image_for_kyoto.jpg",
+            "description": "歴史的な寺院や庭園、伝統的な茶室で知られる街。"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Brazil",
+        "cities": [
+          {
+            "name": "Rio de Janeiro, Brazil",
+            "imageUrl": "img/enter_your_image_for_rio.jpg",
+            "description": "美しいビーチ、活気あるカーニバル、象徴的なランドマークで知られるにぎやかな都市。"
+          },
+          {
+            "name": "São Paulo, Brazil",
+            "imageUrl": "img/enter_your_image_for_sao-paulo.jpg",
+            "description": "多様な文化、芸術、活気あるナイトライフを持つ金融の中心地。"
+          }
+        ]
+      }
+    ],
+    "temples": [
+      {
+        "id": 1,
+        "name": "Angkor Wat, Cambodia",
+        "imageUrl": "img/enter_your_image_for_angkor-wat.jpg",
+        "description": "ユネスコ世界遺産に登録されている、世界最大の宗教的建造物。"
+      },
+      {
+        "id": 2,
+        "name": "Taj Mahal, India",
+        "imageUrl": "img/enter_your_image_for_taj-mahal.jpg",
+        "description": "愛の象徴であり、ムガル建築の傑作。"
+      }
+    ],
+    "beaches": [
+      {
+        "id": 1,
+        "name": "Bora Bora, French Polynesia",
+        "imageUrl": "img/enter_your_image_for_bora-bora.jpg",
+        "description": "美しいターコイズブルーの海と豪華な水上バンガローで知られる島。"
+      },
+      {
+        "id": 2,
+        "name": "Copacabana Beach, Brazil",
+        "imageUrl": "img/enter_your_image_for_copacabana.jpg",
+        "description": "リオデジャネイロにある有名なビーチで、活気ある雰囲気と美しい景色が特徴。"
+      }
+    ]
+  }
